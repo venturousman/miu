@@ -10,7 +10,8 @@ public class Passport {
 	private Date expiryDate;
 	private String issuingAuthority;
 
-	public Passport(String passportNumber, PassportType type, String code, Date issuedDate, Date expiryDate,
+	// package level
+	Passport(String passportNumber, PassportType type, String code, Date issuedDate, Date expiryDate,
 			String issuingAuthority) {
 		this.passportNumber = passportNumber;
 		this.type = type;
