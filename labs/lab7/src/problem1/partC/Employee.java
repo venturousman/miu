@@ -1,5 +1,7 @@
 package problem1.partC;
 
+import java.util.Objects;
+
 public class Employee {
 	private String name;
 	private int salary;
@@ -32,6 +34,7 @@ public class Employee {
 
 	@Override
 	public boolean equals(Object ob) {
+//		System.out.println("equals() called"); // This line will print when hashCode() is called
 		if (ob == null)
 			return false;
 		if (!(ob instanceof Employee))
@@ -40,4 +43,9 @@ public class Employee {
 		return emp.name.equals(name) && emp.salary == salary;
 	}
 
+	@Override
+	public int hashCode() {
+//		System.out.println("hashCode() called"); // This line will print when hashCode() is called
+		return Objects.hash(name, salary);
+	}
 }

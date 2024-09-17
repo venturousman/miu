@@ -75,6 +75,8 @@ public class EmployeeInfo {
 
 		List<Employee> answer = removeDuplicates(list);
 		System.out.println("Is answer correct? " + listsAreEqual(answer, dupsRemoved));
+
+//		printList(answer);
 	}
 
 	/**
@@ -91,4 +93,9 @@ public class EmployeeInfo {
 		return true;
 	}
 
+	public static void printList(List<Employee> emps) {
+		for (Employee e : emps) {
+			System.out.println(e.toString());
+		}
+	}
 }

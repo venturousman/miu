@@ -1,0 +1,8 @@
+
+The Employee class has overridden the 'equals' function. As a result, the listsAreEqual function will run correctly.
+
+The HashMap in Java does call the hashCode() method of an object when performing operations like put, get, and containsKey. 
+In the removeDuplicates function, the containsKey operation is called/used
+Because the Employee doesn't have/override the hashCode function, 
+the containsKey operation will use the default hashCode method of Object class which returns an integer that is typically derived from the memory address of the object.
+This default implementation is not suitable for employees used as keys in HashMap.
