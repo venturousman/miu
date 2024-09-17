@@ -42,6 +42,7 @@ public class Employee {
 		if (!(ob instanceof Employee))
 			return false;
 		Employee emp = (Employee) ob;
+//		return emp.name.equals(name) && emp.salary == salary;
 		return emp.name.equals(name) && emp.salary == salary && emp.visited == visited;
 	}
 

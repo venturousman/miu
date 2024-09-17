@@ -1,0 +1,12 @@
+
+The equals method compares name, salary, and visited. 
+This means two Employee instances are considered equal if all three fields are the same.
+
+The hashCode method includes the visited field in its calculation. 
+This means that if the visited field changes, the hash code of the object will be changed as well.
+
+The issue is the hashCode method in Employee class uses the visited field, which is mutable
+
+
+Solution: 
+Remove the visited field from both equals and hashCode methods.
