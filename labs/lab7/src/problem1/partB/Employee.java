@@ -33,4 +33,14 @@ public class Employee {
 	public boolean equals(Employee e) {
 		return e.name.equals(name) && e.salary == salary;
 	}
+
+//	@Override
+//	public boolean equals(Object o) {
+//		if (o == null)
+//			return false;
+//		if (!(o instanceof Employee))
+//			return false;
+//		var e = (Employee) o;
+//		return e.name.equals(name) && e.salary == salary;
+//	}
 }

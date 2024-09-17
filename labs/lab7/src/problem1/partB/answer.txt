@@ -1,0 +1,12 @@
+
+
+Reason: 
+The Employee class doesn't override the 'equals' function.
+Because the existing 'equals' function in the Employee class doesn't have the correct prototype. 
+It should be public boolean equals(Object obj) { ... }
+
+The 'equals' function calling in the inList function, is using the equals function in Employee class. The result here is correct.
+But the 'contains' function calling in the listsAreEqual function, is using the equals function in Object class. The result here is not correct.
+
+Solution:
+We need to override the equals function in the Employee class with the correct prototype/signature.
