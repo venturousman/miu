@@ -1,5 +1,7 @@
 package prob3;
 
+import java.util.function.Predicate;
+
 public class MyClass {
 	int x;
 	String y;
@@ -12,7 +14,10 @@ public class MyClass {
 	// testing method to check the equality, write a lambda to do this
 	public void myMethod(MyClass cl) {
 		// Implement
-
+//		System.out.println(this.equals(cl));
+//		Predicate<MyClass> pre = x -> this.equals(x);		
+		Predicate<MyClass> pre = this::equals;
+		System.out.println(pre.test(cl));
 	}
 
 	@Override
@@ -32,3 +37,5 @@ public class MyClass {
 		myclass.myMethod(myclass1); // print false
 	}
 }
+
+// 3. implement a method myMethod(MyClass cl) [testing method to check the equality] which uses this method expression to return true if cl is equal to 'this'.
