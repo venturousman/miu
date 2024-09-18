@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.function.Function;
 import java.util.function.Consumer;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /*
  * a. Use Arrays.sort() to sort the names by ignore case using Method reference.
@@ -24,14 +25,18 @@ public class Solution {
 		String[] names = { "Alexis", "Tim", "Kyleen", "Kristy" };
 //		System.out.println("Before sorting ==========");
 //		printStrings(names);
+
 		// a. Use Arrays.sort() to sort the names by ignore case using Method reference.
 //		Arrays.sort(names, (x, y) -> x.compareToIgnoreCase(y));
 		Arrays.sort(names, String::compareToIgnoreCase);
+
 //		System.out.println("\nAfter sorting ==========");
 //		printStrings(names);
 
 		// b. Convert the sorted names array into List.
 		List<String> namesList = Arrays.asList(names);
+		List<String> namesList2 = Stream.of(names).toList();
+
 //		System.out.println("\nb. Convert the sorted names array into List.");
 //		System.out.println(namesList);
 
