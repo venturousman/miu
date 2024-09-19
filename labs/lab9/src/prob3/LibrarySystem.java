@@ -15,7 +15,8 @@ public class LibrarySystem {
 				List.of("Becoming", "Leadership", "Creativity", "Sapiens", "Rebecca"));
 
 		// Task 1. Create a list of libraries from the given three Library objects
-		List<Library> list = Arrays.asList(library1, library2, library3);
+//		List<Library> list = Arrays.asList(library1, library2, library3);
+		List<Library> list = List.of(library1, library2, library3);
 
 		// Task 2: Filter libraries that have more than 3 books and print the name of
 		// the Library
