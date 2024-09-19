@@ -1,6 +1,7 @@
 package prob7;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Main {
 
@@ -13,8 +14,12 @@ public class Main {
 
 		// your stream pipeline here
 		// a.
-		// b.
+		var names = list.stream().filter(e -> e.salary > 100000).filter(e -> e.lastName.charAt(0) > 'M')
+				.map(e -> e.firstName + " " + e.lastName).sorted().collect(Collectors.joining(", "));
+		System.out.println(names);
 
+		// b.
+		System.out.println(LambdaLibrary.NAMES_IN_RANGE_N_Z.apply(list, 100000, 'M'));
 	}
 
 }
