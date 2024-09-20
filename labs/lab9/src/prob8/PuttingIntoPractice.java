@@ -39,7 +39,7 @@ public class PuttingIntoPractice {
 		System.out.println("3: All traders from Cambridge: " + traders);
 
 		// Query 4: Return a string of all traders names sorted alphabetically.
-		var names = traders.stream().map(Trader::getName).sorted().toList();
+		var names = transactions.stream().map(Transaction::getTrader).map(Trader::getName).distinct().sorted().toList();
 		System.out.println("4: A string of all traders names sorted alphabetically: " + names);
 
 		// Query 5: Are there any trader based in Milan?
@@ -47,7 +47,8 @@ public class PuttingIntoPractice {
 				.anyMatch(t -> t.getCity() == "Milan");
 		System.out.println("5: Are there any trader based in Milan? " + isAnyTraderFromMilan);
 
-		// Query 6: Update all transactions so that the traders from Milan are set to Cambridge.
+		// Query 6: Update all transactions so that the traders from Milan are set to
+		// Cambridge.
 //		System.out.println("6: All transactions before updating " + transactions);
 		System.out.println("6: All transactions so that the traders from Milan are set to Cambridge: ");
 		System.out.println(transactions);
